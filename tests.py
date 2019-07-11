@@ -227,10 +227,11 @@ def bestfit():
 	df = cf.datagen.scatter()
 	df['x'] = np.random.randint(1, 20, df.shape[0])
 	df['y'] = df['x']
+	df = df[['x', 'y']]
 
 	options = {
 		'kind': ['scatter'],
-		'bestfit': [True]
+		'bestfit': [True],
 	}
 
 	def bestfit(self, **kwargs):
